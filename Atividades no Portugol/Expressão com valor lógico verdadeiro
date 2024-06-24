@@ -1,0 +1,11 @@
+programa {/*Programa que calcula o valor lógico de uma expressão 
+com proposições */
+  funcao inicio() 
+  {
+      inteiro a = 3,b = 5
+      logico x = (a < b) ou (b < a + 2) e nao (b > a)
+      escreva (x)
+
+      // O valor lógico para x é verdadeiro
+  }
+}

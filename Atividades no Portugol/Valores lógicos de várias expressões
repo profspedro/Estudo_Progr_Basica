@@ -1,0 +1,17 @@
+programa {/*Programa que calcula o valor lógico de uma expressão 
+com proposições */
+  funcao inicio() 
+  {
+      inteiro a = 5,b = 8, c = 10, d =2
+      logico x = (a > b) ou nao (c % 2 == 0)
+      logico k = (b < a + 2) e (d < c - b)
+      logico y = x ou nao (c < a + b/d)
+      logico z = nao x e falso ou (d + a <= b + d)
+
+      // O valor lógico para x é verdadeiro
+      escreva (x)
+      escreva ("\n",y)
+      escreva ("\n",k)
+      escreva ("\n",z)
+  }
+}

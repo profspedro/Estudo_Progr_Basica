@@ -1,0 +1,25 @@
+programa {/*Ex010 - cálculo dos males do cigarro.
+
+  Autor: Simão Pedro */
+
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+    // Declaração de Variáveis
+    inteiro cigarros, tempo
+
+    // Entrada de Dados
+    escreva ("Dados da OMS: CADA CIGARRO CONSUMIDO REDUZ 10 MINUTOS DE VIDA DE UM FUMANTE\n")
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nHä quantos anos você fuma? ")
+    leia (tempo)
+    escreva ("\nQuantos cigarros fumados por dia? ")
+    leia (cigarros)
+
+    // Resultados Finais
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nAo todo, até o momento, você já fumou aproximadamente, ",(cigarros * tempo * 365), " cigarros!\n")
+    escreva ("\nEstima-se que você já perdeu ",\mat.arredondar(((cigarros * tempo * 365)/(6*24)),2)," dias de vida\n")
+    
+  }
+}

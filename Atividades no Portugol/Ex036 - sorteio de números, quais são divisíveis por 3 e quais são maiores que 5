@@ -1,0 +1,35 @@
+programa {/*Ex036 - Programa que pergunte quantos números vamos
+sortear e faça o computador gerar esses números sozinho.
+  No final, mostre quantos são maiores que cinco e quantos são
+  divisíveis por três.
+
+        Autor: Simão Pedro */
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+        inteiro tot
+        escreva ("Quantos números vamos sortear? ")
+        leia (tot)
+        escreva ("\n-------------------------------------\n")
+        escreva ("Sorteando ",tot," valores: \n")
+
+        inteiro cont = 1, num, n5 = 0, d3 = 0
+        enquanto (cont <= tot) {
+                num = ut.sorteia(1,10)
+                escreva (num," - ")
+                se (num > 5) {
+                    n5 ++
+                }
+                se (num % 3 == 0 ) {
+                    d3 ++
+                }
+                ut.aguarde(500)
+                cont ++
+        }
+        escreva ("PRONTO!\n")
+        escreva ("\n-------------------------------------\n")
+        escreva ("\nDos ",tot," números sorteados,")
+        escreva ("\ntemos ",n5," maiores que cinco")
+        escreva ("\ne ",d3," divisíveis por três.\n\n")
+  }
+}

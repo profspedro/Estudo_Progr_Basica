@@ -1,0 +1,45 @@
+programa {/*Ex037 - Pessoa mais jovem e pessoa mais velha
+
+          Autor: Simão Pedro */
+  funcao inicio() 
+  {
+        cadeia nome, velho = "", novo = ""
+        inteiro idade, cont = 1, maior = 0, menor = 0
+
+        enquanto (cont <= 5) {
+                // Entradaa dos dados
+                escreva ("-------------------------------\n")
+                escreva (cont,"a. PESSOA \n")
+                escreva ("-------------------------------\n")
+                escreva ("NOME: ")
+                leia (nome)
+                escreva ("IDADE: \n")
+                leia (idade)
+
+                // Análise dos dados
+                se (cont == 1) {
+                      maior = idade
+                      velho = nome
+                      menor = idade
+                      novo = nome 
+                } senao { 
+                    se (idade > menor) {
+                      maior = idade 
+                      velho = nome
+                    }
+                    se (idade < menor) {
+                      menor = idade
+                      novo = nome
+                    }
+                }
+                cont ++
+
+        } // Fim do Enquanto
+
+        // Restultados
+        escreva ("==================================\n")
+        escreva ("\nA pessoa mais jovem é: ",nome," com ",menor," anos")
+        escreva ("\nA pessoa mais velha é: ",velho," com ",maior, " anos")
+
+  }
+}

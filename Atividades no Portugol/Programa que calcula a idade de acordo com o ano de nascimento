@@ -1,0 +1,14 @@
+programa {/*Programa que calcula a idade de acordo com o ano de nascimento */
+  inclua biblioteca Calendario --> cal
+  funcao inicio() 
+  {
+      escreva ("Em que ano você nasceu? ")
+      inteiro nasc
+      leia (nasc)
+      inteiro idade = \cal.ano_atual() - nasc
+      escreva ("\nVocê tem ",idade," anos")
+      se (idade >= 18 e idade < 25)
+          // 18 <= idade < 25
+          escreva ("\nVocê já pensou em fazer o concurso dos Bombeiros? ")
+  }
+}

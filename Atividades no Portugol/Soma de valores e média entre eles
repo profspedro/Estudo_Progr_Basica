@@ -1,0 +1,23 @@
+programa {
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+        inteiro s,n,c,tot
+        real med  // média
+        s = 0
+        med = 0
+        c = 1
+        escreva ("Quantos números você vai me informar? ")
+        leia (tot)
+        enquanto (c <= tot) {
+                escreva ("Digite um número: ")
+                leia (n)
+                s += n
+                c += 1
+        }
+        med = s / tot
+        escreva ("A soma foi de ",s)
+        escreva ("\nA média total dos valores foi: ",mat.arredondar(med,2))
+    
+  }
+}

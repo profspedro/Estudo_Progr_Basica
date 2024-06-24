@@ -1,0 +1,8 @@
+programa {/*Programa que calcula o valor lógico de uma expressão 
+com proposições */
+  funcao inicio() 
+  {
+      logico r = nao (5 > 3) ou (10 >= 10) e (7 <4)
+      escreva (r)  
+  }
+}

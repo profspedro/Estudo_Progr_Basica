@@ -1,0 +1,24 @@
+programa {/*Ex032 - Soma Par e Ímpar
+
+        Autor: Simão Pedro */
+  funcao inicio() 
+  {     inteiro c = 1,n
+        inteiro par = 0, impar = 0
+        enquanto (c <= 5) {
+                escreva ("Digite o ",c,"o. valor: ")
+                leia (n)
+                se (n % 2 ==0) {
+                    par += n
+                } senao {
+                    impar += n
+                }
+
+                c ++
+        }
+        // Resultados
+        escreva ("\n-------------------------------------\n")
+        escreva ("\nA soma dos pares deu: ",par)
+        escreva ("\nA soma dos ímpares deu: ",impar)
+    
+  }
+}

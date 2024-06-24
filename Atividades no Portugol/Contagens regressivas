@@ -1,0 +1,10 @@
+programa {/*Programa que faz contagem regressiva */
+  funcao inicio() {
+        inteiro c = 10
+        enquanto (c >= 0) {
+              escreva (c, " - ")
+              c = c - 1
+        } 
+        escreva ("FIM!")
+  }
+}

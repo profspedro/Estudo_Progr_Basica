@@ -1,0 +1,25 @@
+programa {/*Ex003 - Programa para calcular a área de uma parede retangular, 
+dadas a largura e a altura.
+
+  Autor: Simão Pedro */
+  
+  funcao inicio() 
+  {
+    // Declaração de Variáveis
+    real larg,alt
+
+    // Entrada de Dados
+    escreva ("\nINFORMAÇÃO IMPORTANTE: 1 litro de tinta pinta 2m2 de parede\n")
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nLargura (em metros): ")
+    leia (larg)
+    escreva ("\nAltura (em metros): ")
+    leia (alt)
+
+    // Resultados Finais
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nUma parede de ",larg," metros de largura por ",alt," metros de altura tem área de ",(larg * alt)," metros quadrados")
+    escreva ("\nPrecisaremos de ",(larg * alt)/2," litros de tinta \n")
+    
+  }
+}

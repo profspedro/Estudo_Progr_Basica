@@ -1,0 +1,25 @@
+programa { /* Ex031 - Programa que faz contagem regressiva
+            Autor: Simão Pedro*/
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+        inteiro n,m
+        escreva ("Sua contagem regressiva vai começar em: ")
+        leia (n)  
+        escreva ("Marcar os múltiplos de: ")
+        leia (m)
+        // Contagem
+        inteiro c = n
+        enquanto (c >= 0) {
+                se (c % m == 0) {
+                    escreva ("[",c,"] - ")
+                } senao {
+                    escreva (c," - ")
+                }
+                c--
+                ut.aguarde(500)
+        }
+        escreva ("FIM!")
+
+  }
+}

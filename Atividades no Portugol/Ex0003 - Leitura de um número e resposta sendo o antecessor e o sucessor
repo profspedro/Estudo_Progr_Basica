@@ -1,0 +1,22 @@
+programa {/*Ex003 - Programa para ler um número qualquer e mostrar seu
+antecessor e sucessor
+
+  Autor: Simão Pedro */
+  funcao inicio() 
+  {
+    // Declaração de Variáveis
+    inteiro num, ant,suc
+
+    // Entrada de Dados
+    escreva ("\nDigite um número: ")
+    leia (num)
+    escreva ("\n-----------------------------------------------------\n")
+
+    // Resultados Finais
+    ant = num - 1
+    escreva ("O antecessor de ",num," é o valor ",ant," \n")
+    suc = num + 1
+    escreva ("O sucessor de ", num," é o valor ",suc," \n")
+    
+  }
+}

@@ -1,0 +1,13 @@
+programa {/*Programa que usa condicional se... para calcular a veloc.
+e concluir se ele será multado */
+  funcao inicio() 
+  {
+  escreva ("Velocidade do carro: ")  
+  real vel
+  leia (vel)
+  se (vel > 80) {
+    escreva ("MULTADO!")
+    escreva ("\nDirija com cuidado! ")
+  }
+  }
+}

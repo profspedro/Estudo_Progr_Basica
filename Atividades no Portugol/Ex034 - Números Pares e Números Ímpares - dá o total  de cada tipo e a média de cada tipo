@@ -1,0 +1,31 @@
+programa {/*Ex034 - Números Pares e Números Ímpares - dá o total 
+de cada tipo e a média de cada tipo
+
+        Autor: Simão Pedro */
+  inclua biblioteca Tipos --> t
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+
+        inteiro cont = 1, num, tp = 0, ti = 0, sp = 0, si = 0
+        enquanto (cont <= 5){
+                escreva ("Digite um número inteiro:  ")
+                leia (num)
+                se (num % 2 == 0){
+                    tp ++
+                    sp += num
+                } senao {
+                    ti ++
+                    si += num
+                }
+                cont ++
+        }
+        real mp = t.inteiro_para_real(sp) / tp
+        real mi = t.inteiro_para_real(si) / ti
+        escreva ("\n-------------------------------------\n")
+        escreva ("\nVocê digitou ",tp," números pares. E a média entre eles é: ",mat.arredondar(mp,2))
+        escreva ("\nVocê digitou ", ti," números ímpares. E a média entre eles é: \n",mat.arredondar(mi,2))
+        escreva ("\n-------------------------------------\n")
+        escreva ("\n\n")
+  }
+}

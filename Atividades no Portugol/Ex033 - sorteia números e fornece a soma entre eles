@@ -1,0 +1,28 @@
+programa {/*Ex033 - Sorteio de Números
+
+        Autor: Simão Pedro */
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+        // Entrada de dados
+        inteiro tot     
+        escreva ("Quantos números você quer que eu sorteie? ")
+        leia (tot)
+        escreva ("\n-------------------------------------\n")
+        escreva ("Sorteando os ",tot," números: \n")
+
+        // Contagem
+        inteiro c = 1, num, soma = 0
+        enquanto (c <= tot) {
+                num = ut.sorteia(1,10)
+                soma += num
+                escreva (num," - ")
+                c ++
+                ut.aguarde(500)
+        }
+        escreva ("PRONTO\n")
+        escreva ("\n-------------------------------------\n")
+        escreva ("A soma entre todos oesses valores é igual a: ",soma)
+        escreva ("\n\n")
+  }
+}

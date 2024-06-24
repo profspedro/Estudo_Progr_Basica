@@ -1,0 +1,50 @@
+programa {/*Ex035 - Programa que pergunte quantas pessoas serão cadastradas
+e o peso de referência a se considerar. Depois disso, pergunte o peso e o 
+sexo de cada pessoa e analise se cada um está dentro do limite de peso ou não.
+No final de tudo, mostre quantos homens e quantas mulheres estão acima do 
+limite de referência.
+
+        Autor: Simão Pedro */
+  inclua biblioteca Texto --> txt
+  funcao inicio() 
+  {
+        // Dados iniciais
+        inteiro pes,cont
+        real kg
+        escreva ("Quantas pessoas vamos cadastrar? ")
+        leia (pes)
+        escreva ("Qual será o peso de referência? ")
+        leia (kg)
+
+        // Leitura dos dados
+        inteiro cont = 1,toth = 0,totm = 0
+        real peso
+        caracter sexo
+        enquanto (cont <= pes) {
+        escreva ("\n-------------------------------------\n")
+        escreva ("\n        PESSOA ",cont," de ",pes,"\n")
+        escreva ("\n-------------------------------------\n")
+        escreva ("\nPeso: (kg) ")
+        leia (peso)
+        escreva ("Sexo: [M/F] ")
+        leia (sexo)
+        se (peso <= kg) {
+              escreva ("\n==== PESO DENTRO DO LIMITE ====\n")
+        } senao {
+              escreva ("\n==== PESO ACIMA DO LIMITE =====\n")
+              se (txt.caixa_alta(sexo) == "M") {
+                  toth ++
+              } senao se (txt.caixa_alta(sexo) == "F") {
+                  totm ++
+              }
+        }
+        cont++
+        }
+        escreva ("\n----------- RESULTADO ---------------\n")
+        escreva ("\nAo todo, temos ",toth," homens ")
+        escreva ("e ",totm, " mulheres acima do peso de referência.")
+
+
+    
+  }
+}

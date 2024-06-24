@@ -1,0 +1,21 @@
+programa {/*Ex008 - Programa para calcular o desconto aplicado ao preço
+de um produto.
+
+  Autor: Simão Pedro */
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+    // Declaração de Variáveis
+    real pre
+
+    // Entrada de Dados
+    escreva ("\nQual é o preço do produto? R$ ")
+    leia (pre)
+
+    // Resultados Finais
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nO produto custava R$ ",pre," e agora custará R$ ",\mat.arredondar((pre - (pre * 5/100)),2)," já com 5% de desconto\n")
+    escreva ("\nAo todo teremos R$ ",\mat.arredondar((pre - (pre - (pre * 5/100))),2)," de economia \n")
+    
+  }
+}

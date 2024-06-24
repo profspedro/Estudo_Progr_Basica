@@ -1,0 +1,25 @@
+programa {/*Ex011 - Programa que mostra a cidade que a pessoa mora em caixa alta, qual é a 
+primeira letra do nome da cidade e quantas letras ela tem
+
+  Autor: Simão Pedro */
+
+  inclua biblioteca Texto --> txt
+  funcao inicio() 
+  {
+    // Declaração de Variáveis
+    cadeia cidade
+
+    // Entrada de Dados
+    escreva ("{ EXERCÍCIO 011 - Analisando sua cidade } \n")
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nEm que cidade você mora? ")
+    leia (cidade)
+    
+    // Resultados Finais
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ("\nVocê mora na cidade ",\txt.caixa_alta(cidade))
+    escreva ("\nA primeira letra é ",\txt.obter_caracter(cidade,0),"\n")
+    escreva ("E contém ",\txt.numero_caracteres(cidade)," caracteres \n")
+    
+  }
+}

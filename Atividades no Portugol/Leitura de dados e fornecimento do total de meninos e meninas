@@ -1,0 +1,21 @@
+programa {/* Programa que conta o número de meninos e o número de 
+meninas
+
+        Autor: Simão Pedro */
+  funcao inicio() {
+        inteiro c = 1, meninos = 0, meninas = 0
+        caracter sx
+        enquanto (c<=5) {
+              escreva ("Digite o sexo: [M/F] ")
+              leia (sx)
+              se (sx == "M" ou sx == "m") {
+                  meninos ++
+              } se (sx == "F" ou "f") {
+                  meninas ++
+              }
+              c ++
+        }
+        escreva ("O total de meninos é ",meninos)
+        escreva ("\nO total de meinas é ",meninas)
+  }
+}

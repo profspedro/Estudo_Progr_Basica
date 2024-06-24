@@ -1,0 +1,31 @@
+programa {/*Ex030 - Programa do Jogo do Pin 
+          
+          Autor: Simão Pedro*/
+  inclua biblioteca Util --> ut
+  funcao inicio() {
+
+        escreva ("-----------------------------------\n")
+        escreva ("           JOGO DO PIN             \n")
+        escreva ("-----------------------------------\n")
+
+        inteiro tot
+
+        escreva ("Quer contar até quanto? ")
+        leia (tot)
+
+        inteiro c = 1
+        enquanto (c <= tot) {
+                se (c % 4 != 0) {
+                escreva (c," - ")
+                } senao {
+                      escreva ("PIN! - ")
+                }
+                ut.aguarde(500)
+                c = c + 1
+
+        }
+        escreva ("FIM!")
+
+    
+  }
+}

@@ -1,0 +1,30 @@
+programa {/*Ex003 - Conversão de unidades de medida de comprimento
+
+  Autor: Simão Pedro */
+  
+  funcao inicio() 
+  {
+    // Declaração de Variáveis
+    inteiro dist
+
+    // Entrada de Dados
+    escreva ("\nDistância (em metros): ")
+    leia (dist)
+
+    // Resultados Finais
+    escreva ("\n-----------------------------------------------------\n")
+    escreva ((dist / 1000)," km")
+    escreva ("\n\n")
+    escreva ((dist / 100)," Hm")
+    escreva ("\n\n")
+    escreva ((dist / 10)," Dam")
+    escreva ("\n\n")
+    escreva ((dist * 10)," Dm")
+    escreva ("\n\n")
+    escreva ((dist * 100)," Cm")
+    escreva ("\n\n")
+    escreva ((dist * 1000)," Mm")
+    escreva ("\n\n")
+    
+  }
+}
