@@ -1,0 +1,25 @@
+programa {/* Programa que lê maior e menor valores */
+  funcao inicio() 
+  {
+        inteiro n, cont = 1, maior = 0, menor = 0
+        enquanto (cont <= 4) {
+                escreva ("Digite um número: ")
+                leia (n)
+                se (cont == 1) {
+                        maior = n
+                        menor = n
+                } senao {
+                    se (n < menor) {
+                        menor = n
+                    }
+                    se (n > maior) {
+                        maior = n
+                    }
+                }
+                cont ++
+        }
+        escreva ("O maior valor foi ",maior)
+        escreva ("\nO menor valor foi ",menor)
+  }
+}
+
