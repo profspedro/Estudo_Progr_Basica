@@ -1,0 +1,20 @@
+programa {/*Ex015 - Programa que auxilia um banco lendo o ano em
+    que a pessoa nasceu e fornece dados refrentes a fila que a 
+    pessoa deve se dirigir
+    Autor: Simão Pedro*/
+  inclua biblioteca Calendario --> cal
+  funcao inicio() 
+  {     inteiro nasc
+        escreva ("Em que ano você nasceu? ")
+        leia (nasc)
+
+        inteiro idade = \cal.ano_atual() - nasc
+        escreva ("\nHoje, em ",(\cal.ano_atual()),", você tem ",idade," anos, certo?\n")
+        escreva ("\n---------------------------------------------------------------\n")
+        escreva ("\n      SEJA BEM-VINDO AO BANCO DÍVIDA ETERNA     \n")
+        se (idade >= 65) {
+            escreva ("\n=========== ATENÇÃO! DIRIJA-SE À FILA PREFERENCIAL =========\n")
+        }
+        escreva ("\n\n")
+  }
+}
