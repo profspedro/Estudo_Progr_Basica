@@ -1,0 +1,22 @@
+programa {/*Programa que identifica qual número é maior e qual é o menor */
+  
+  funcao inicio() 
+  {
+      inteiro n1,n2
+      escreva ("\nPrimeiro número: ")
+      leia (n1)
+      escreva ("\nSegundo número: ")
+      leia (n2)
+      se (n1 > n2) {
+          // colocando passo a passo a comparação entre os números
+          escreva ("\nO maior é o  ",n1," \n")
+      } senao {
+          se (n1 < n2) {
+          escreva ("\nO maior é o ",n2," \n")
+      } senao {
+          escreva ("\nEles são iguais")
+      }
+      escreva ("\n\n")
+      }
+}
+}

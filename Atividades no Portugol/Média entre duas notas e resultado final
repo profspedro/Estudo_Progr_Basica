@@ -1,0 +1,28 @@
+programa {/*Programa que calcula a média aritmética entre duas notas de um aluno */
+  funcao inicio() 
+  {
+      real av1,av2,media
+
+      // Declaração das notas
+      escreva ("\nPrimeira nota: ")  
+      leia (av1)
+      escreva ("\nSegunda nota: ")
+      leia (av2)
+
+      // Cálculo da média
+      media = (av1 + av2)/2
+      escreva ("\nA média entre as duas avaliações é igual a ",media," \n")
+
+      //Resultados Finais
+      se (media >= 7) 
+      {
+          escreva ("\nAPROVADO(A)")
+      } senao se (media >=5 e media <7){
+          escreva ("\nRECUPERAÇÃO")
+      } senao se (media <5)
+      {
+          escreva ("\nREPROVADO(A)")
+      }
+      escreva ("\n\n")
+  }
+}

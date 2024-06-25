@@ -1,0 +1,17 @@
+programa {/*Programa que calcula se o número é par ou ímpar */
+  
+  funcao inicio() 
+  {
+      inteiro num
+      escreva ("\nDigite um número: ")
+      leia (num)
+      escreva ("\nVocê acabou de digitar o número ",num)
+      se (num % 2 == 0)
+          // um número é par quando a divisão dele por 2 é exata
+          escreva (" e ele é PAR ")
+          senao 
+          escreva (" e ele é ÍMPAR \n")
+      escreva ("\n\n")
+  }
+      
+}

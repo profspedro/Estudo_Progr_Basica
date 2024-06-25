@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "uniportugol.uni-portugol"
+        "uniportugol.uni-portugol",
+        "ms-vscode.cpptools-extension-pack"
     ]
 }

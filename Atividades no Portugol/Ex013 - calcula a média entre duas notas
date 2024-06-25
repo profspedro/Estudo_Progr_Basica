@@ -1,0 +1,24 @@
+programa {/*Ex013 - Programa que calcula a média aritmética entre duas notas de um aluno */
+  funcao inicio() 
+  {
+      real av1,av2,media
+
+      // Declaração das notas
+      escreva ("\nPrimeira nota: ")  
+      leia (av1)
+      escreva ("\nSegunda nota: ")
+      leia (av2)
+
+      // Cálculo da média
+      media = (av1 + av2)/2
+     
+      //Resultados Finais
+      se (media >= 7) 
+      {
+          escreva ("\nPARABÉNS! A sua média foi ",media)
+      } senao {
+          escreva ("\nA sua média foi ",media)
+      }
+      escreva ("\n\n")
+  }
+}

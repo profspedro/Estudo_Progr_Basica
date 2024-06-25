@@ -1,0 +1,24 @@
+programa {/*Ex014 - 10% de desconto em compras acima de 500,00 */
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+      real comp
+
+      // Declaração dos dados
+      escreva ("\nValor total da compra: ")
+      leia (comp)
+
+      //Resultados Finais
+      escreva ("\n--------------- RESULTADO -------------\n")
+      escreva ("\nVocê comprou ",comp," em nossa loja. OBRIGADO!\n")
+      se (comp > 500) 
+      {
+          escreva ("\n=========== ATENÇÃO ===============\n")
+          escreva ("\nPor fazer uma compra acima de R$ 500,00, ")
+          escreva ("\nvocê vai receber R$ ",(\mat.arredondar((comp *10/100),2))," de desconto")
+          escreva ("\nO valor total a ser pago será de R$ ",(\mat.arredondar((comp - (comp *10/100)),2)),"!")
+          escreva ("\nVolte sempre!")
+      }
+      escreva ("\n\n")
+  }
+}
