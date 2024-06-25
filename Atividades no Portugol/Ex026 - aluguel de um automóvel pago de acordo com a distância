@@ -1,0 +1,26 @@
+programa {/*Ex - 
+
+    Autor: Simão Pedro*/
+  funcao inicio() 
+  {
+    inteiro dist
+
+    escreva ("\n                      VIAÇÃO VAMO JUNTO                           \n")  
+    escreva ("\n---------------------------------------------------------------\n")
+    escreva ("\nVIAGENS ATÉ 200 km:                                     R$ 0,50/km")
+    escreva ("\nVIAGENS ACIMA DE 200 km:                                R$ 0,35/km\n")
+    escreva ("\n==================================================================\n")
+    escreva ("\nInforme a distância total da viagem, em Km: ")
+    leia (dist)
+
+    escreva ("\n----------------------- RESULTADO --------------------------------\n")
+    se (dist > 200) {
+      escreva ("\nUma viagem de ",dist," km vai custar R$ 0,50/km")
+      escreva ("\nVALOR TOTAL: R$ ",(dist * 0.5))
+    } senao {
+      escreva ("\nUma viagem de ",dist," Km vai custar R$ 0,35/km")
+      escreva ("\nVALOR TOTAL: R$ ",(dist * 0.35))
+    }
+    escreva ("\n\n")
+  }
+}
