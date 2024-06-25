@@ -1,0 +1,22 @@
+programa {/*Ex019 - Programa para calcular o inverso de um número, se este for positivo, 
+ou o oposto, se este for negativo.
+
+    Autor: Simão Pedro*/
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+    inteiro num  
+
+    escreva ("\n============= NÚMEROS POSITIVOS: INVERSOS / Outros: OPOSTO ============\n")  
+    escreva ("\nDigite um número: ")
+    leia (num)
+
+    escreva ("\n-----------------------------------------------------------------------\n")
+    se (num > 0) {
+      escreva ("\nO inverso de ",num," é igual a ",\mat.arredondar((1/num),3))
+    } senao {
+      escreva ("\nO oposto de ",num," é igual a ",(- num))
+    }
+    escreva ("\n\n")
+  }
+}

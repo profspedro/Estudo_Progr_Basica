@@ -1,0 +1,22 @@
+programa {/*Ex020 - Programa que lê um número qualqeur e informa se ele é positivo,
+negativo ou nulo.
+
+    Autor: Simão Pedro*/
+  funcao inicio() 
+  {
+    inteiro num
+    escreva ("\nDigite um número: ")  
+    leia (num)
+
+    escreva ("\nO número ",num," digitado é ")
+    se (num > 0) {
+      escreva ("POSITIVO")
+    } senao se (num < 0) {
+      escreva ("NEGATIVO")
+    } senao se (num == 0) {
+      escreva ("NULO")
+    }
+    escreva ("\n\n")
+  }
+}
+

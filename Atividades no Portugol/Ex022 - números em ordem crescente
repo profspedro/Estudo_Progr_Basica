@@ -1,0 +1,22 @@
+programa {/*Ex022 - Programa que coloca dois números inteiros quaisquer em ordem crescente, 
+independentemente se são iguais ou não */
+  funcao inicio() 
+  {
+    inteiro n1,n2
+
+    escreva ("Primeiro valor: ")  
+    leia (n1)
+    escreva ("Segundo valor: ")
+    leia (n2)
+
+    se (n1 < n2) {
+      escreva ("\nOs valores digitados, em ordem crescente são: ",n1," e ",n2)
+    } senao se (n1 > n2) {
+      escreva ("\nOs valores digitados, em ordem crescente são: ",n2," e ",n1)
+    } senao {
+      escreva ("\nNão há necessidade de ordená-los. Os valores são iguais")
+    }
+    escreva ("\n\n")
+  }
+}
+

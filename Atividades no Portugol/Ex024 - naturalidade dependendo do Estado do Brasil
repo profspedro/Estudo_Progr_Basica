@@ -1,0 +1,25 @@
+programa {/*Ex024 - Programa que o Estado do Brasil que a pessoa nasceu e mostra sua naturalidade
+
+Autor: Simão Pedo*/
+  inclua biblioteca Texto --> txt
+  funcao inicio() 
+  {
+    cadeia estado
+    escreva ("Em que Estado do Brasil você nasceu? ")
+    leia (estado)
+
+    estado = \txt.caixa_alta(estado)
+    escreva ("\nNascendo no Estado ",estado," você é ")
+
+    se (estado == "RJ") escreva ("CARIOCA")
+    senao se (estado == "SP") escreva ("PAULISTA")
+    senao se (estado == "MG") escreva ("MINEIRO")
+    senao se (estado == "DF") escreva ("BRASILIENSE")
+    senao se (estado == "SC") escreva ("BARRIGA VERDE")
+    senao se (estado == "BA") escreva ("BAIANO")
+    senao se (estado == "ES") escreva ("CAPIXABA")
+    senao escreva ("natural de sua cidade mas ainda não sei do que te chamar.")
+
+    escreva ("\n\n")
+  }
+}

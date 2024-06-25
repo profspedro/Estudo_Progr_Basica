@@ -1,0 +1,32 @@
+programa {/*Ex023 - Programa que calcula a idade para o serviço militar
+
+Autor: Simão Pedo*/
+  inclua biblioteca Calendario --> cal
+  funcao inicio() 
+  {
+    inteiro nasc, idade
+
+    escreva ("                SERVIÇO MILITAR                   \n")
+
+    escreva ("\n------------------------------------------------\n")
+
+    escreva ("\nEm que ano você nasceu? ")
+    leia (nasc)
+
+    escreva ("\n------------------------------------------------\n")
+
+    idade = \cal.ano_atual() - nasc
+    escreva ("Estamos em ",(\cal.ano_atual())," e você tem ",idade," anos")
+
+    se (idade > 18) {
+      escreva ("\nVocê deveria ter se alistado em ",(nasc + 18))
+      escreva ("\nVocê está ",(\cal.ano_atual() - (nasc + 18))," atrasado")
+    } senao se (idade < 18) {
+      escreva ("\nVocê ainda não completou 18 anos. Isso vai acontecer em ",(nasc + 18))
+      escreva ("\nAinda faltam ",(18 - idade)," anos")
+    } senao se (idade == 18) {
+      escreva ("\nJOVEM! Você completa 18 anos em ",(nasc + 18),". CORRA!")
+    }
+    escreva ("\n\n")
+  }
+}

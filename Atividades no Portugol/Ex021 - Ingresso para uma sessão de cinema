@@ -1,0 +1,30 @@
+programa {/*Programa que mostra se pode ou não adquirir o ingresso de uma sessão de cinema
+
+    Autor: Simão Pedro*/
+  inclua biblioteca Calendario --> cal
+  funcao inicio() 
+  {
+      inteiro h = 15
+      real pre = 20 
+
+      // Cabeçalho do programa
+      escreva ("\n                            CINEMA CURTE SÓ                            \n")
+      escreva ("\n-----------------------------------------------------------------------\n")
+      escreva ("HORÁRIO DO FILME:\t\t",h,"h")
+      escreva ("\nPREÇO DO INGRESSO: \t\tR$ ",pre)
+      escreva ("\n=======================================================================\n")
+
+      inteiro hora = \cal.hora_atual(falso)
+      escreva ("Agora são ",hora," horas")
+
+      real din 
+      escreva ("\nQuanto de dinheiro você tem: R$ ")
+      leia (din)
+
+      se (hora <= h e din >= pre) {
+        escreva ("\nVocê pode comprar o ingresso. SEJA BEM-VINDO! ! !")
+      } senao {
+        escreva ("\nIngelizmente não é possível você comprar o ingresso. Tente outro dia.")
+      }
+  }
+}

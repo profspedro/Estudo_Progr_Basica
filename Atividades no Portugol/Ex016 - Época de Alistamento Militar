@@ -1,0 +1,22 @@
+programa {/*Ex015 - Época de Alistamento Militar
+
+    Autor: Simão Pedro*/
+  inclua biblioteca Calendario --> cal
+  funcao inicio() 
+  {
+      inteiro nasc, idade
+
+      escreva ("\nEm que ano você nasceu? ")
+      leia (nasc)
+      escreva ("\n---------------------------------------------------------------\n")
+      idade = \cal.ano_atual() - nasc
+      escreva ("Sua idade atual é ",idade," anos.\n")
+
+      se (idade < 18) {
+        escreva ("Você ainda não compltou 18 anos. Não pode se alistar.\n")
+      } senao {
+        escreva ("Espero sinceramente que você tenha se alistado.")
+      }
+      escreva ("\n\n")
+  }
+}

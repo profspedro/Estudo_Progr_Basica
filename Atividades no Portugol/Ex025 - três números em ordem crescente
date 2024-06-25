@@ -1,0 +1,51 @@
+programa {/*Ex025 - Programa que lê três números inteiros e mostra-os em ordem crescente
+
+Autor: Simão Pedo*/
+  funcao inicio() 
+  {
+    inteiro a,b,c 
+    inteiro maior,menor,meio 
+
+    escreva ("\n---------------------------------------------------------------\n")
+    escreva ("\n              TRÊS VALORES EM ORDEM CRESCENTE                  \n")
+    escreva ("\n---------------------------------------------------------------\n")
+
+    escreva ("\nPrimeiro valor: ")
+    leia (a)
+    escreva ("\nSegundo valor: ")
+    leia (b)
+    escreva ("\nTerceiro valor: ")
+    leia (c)
+
+    se (a > b e b > c) {
+      maior = a 
+      meio = b 
+      menor = c 
+    } senao se (a > c e c > b) {
+      maior = a 
+      meio = c 
+      menor = b 
+    } senao se (b > c e c > a) {
+      maior = b 
+      meio = c 
+      menor = a 
+    } senao se (b > a e a > c) {
+      maior = b 
+      meio = a 
+      menor = c 
+    }senao se (c > a e a > b) {
+      maior = c 
+      meio = a 
+      menor = b 
+    } senao se (c > b e b > a) {
+      maior = c 
+      meio = b 
+      menor = a
+    }
+    escreva ("\n---------------------------------------------------------------\n")
+    escreva ("\nMENOR = ",menor)
+    escreva ("\nINTERMEDIÁRIO = ",meio)
+    escreva ("\nMAIOR = ",maior)
+    escreva ("\n\n")
+  }
+}
