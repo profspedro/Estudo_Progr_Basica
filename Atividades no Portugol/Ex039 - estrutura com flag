@@ -1,0 +1,35 @@
+programa {/*Ex039 - Programa que lê dados (números), fornece a soma, a média, e qual o maior entre eles; excluindo a flag 9999.
+
+          Autor: Simão Pedro */
+  inclua biblioteca Tipos --> tp
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+      inteiro num = 0, cont = 0, soma = 0, maior = 0
+      real med = 0
+      enquanto (num != 0) {
+        escreva ("\n-----------------------------------\n")
+        escreva ((cont +1),"o. VALOR [Digite 9999 para encerrar]")
+        escreva ("\n-----------------------------------\n")
+        escreva ("\nNúmero: ")
+        leia (num)
+        se (num != 9999) {
+          soma += num
+          se (cont == 0) {
+            maior == 0
+          } senao se (num > maior) {
+            maior == num
+          }
+          cont ++
+        }
+      }
+      med = \tp.inteiro_para_real(soma)/\tp.inteiro_para_real(cont)
+
+      escreva ("\n====================================\n")
+      escreva ("Ao todo foram digitados ",cont," valores")
+      escreva ("\nA soma entre eles é ",soma)
+      escreva ("\nA média entre eles é ",\mat.arredondar(med,2))
+      escreva ("\nO maior valor digitado foi ",maior)
+      escreva ("\n====================================\n")
+  }
+}
