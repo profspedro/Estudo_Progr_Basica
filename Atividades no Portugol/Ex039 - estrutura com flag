@@ -15,10 +15,10 @@ programa {/*Ex039 - Programa que lê dados (números), fornece a soma, a média,
         se (num != 9999) {
           soma += num
           se (cont == 0) {
-            maior == num
+            maior = num
           } senao { 
             se (num > maior) {
-            maior == num
+            maior = num
             }
           }
           cont ++
