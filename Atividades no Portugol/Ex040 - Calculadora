@@ -1,0 +1,59 @@
+programa {/*Ex040 - Programa Calculadora do tipo: digite dois valores e escolha a opção desejada
+[1] Adição    [2] Subtração   [3] Multiplicação   [4] Entrar com novos dados    [5] Sair
+Ao colocar uma opção diferente aparece a mensagem: OPÇÃO INVÁLIDA
+
+          Autor: Simão Pedro */
+  funcao inicio() 
+  {
+    inteiro op1,op2,opc = 0,resp
+
+    escreva ("\nOPerando 1: ")
+    leia (op1 )
+    escreva ("\nOperano 2: ")
+    leia (op2)
+    enquanto (opc != 5) {
+          escreva ("\n\n============= ESCOLHA UMA OPERAÇÃO ===============\n")
+          escreva ("\n[1] Adição")
+          escreva ("\n[2] Subtração")
+          escreva ("\n[3] Multiplicação")
+          escreva ("\n[4] Entrar com novos dados")
+          escreva ("\n[5] Sair")
+          escreva ("\n>>>>>>>>>>>>>>>>>>> SUA OPÇÃO: ")
+          leia (opc)
+          escolha (opc) {
+              caso 1: // Adição
+                  resp = op1 + op2
+                  escreva ("\n----------------------------------------\n")
+                  escreva ("\nCalculando ",op1," + ",op2," = ",resp)
+                  escreva ("\n----------------------------------------\n")
+                  pare 
+              caso 2: // Subtração
+                  resp = op1 - op2
+                  escreva ("\n----------------------------------------\n")
+                  escreva ("\nCalculando ",op1," - ",op2," = ",resp)
+                  escreva ("\n----------------------------------------\n")
+                  pare
+              caso 3: // Multiplicação
+                  resp = op1 * op2
+                  escreva ("\n----------------------------------------\n")
+                  escreva ("\nCalculando ",op1," x ",op2," = ",resp)
+                  escreva ("\n----------------------------------------\n")
+                  pare
+              caso 4: // Entrar com novos dados
+                  escreva ("\nOperando 1: ")
+                  leia (op1)
+                  escreva ("Operando 2: ")
+                  leia (op2)
+                  pare
+              caso 5: // Sair
+                  escreva ("\n================ SAINDO ================\n")
+                  pare
+              caso contrario: // OPção diferente
+                  escreva ("\n================ OPÇÃO INVÁLIDA ================\n")
+                  pare
+          } 
+    }
+
+
+  }
+}
