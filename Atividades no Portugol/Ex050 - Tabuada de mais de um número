@@ -1,0 +1,26 @@
+programa {/*Ex050 - Tabuada  de mais de um número */
+  inclua biblioteca Util --> ut
+  funcao inicio() {
+    inteiro ini,fin,x,y
+
+    escreva ("Tabuada INICIAL = ")
+    leia (ini)
+    escreva ("Tabuada FINAL = ")
+    leia (fin)
+
+    para (x = ini; x <= fin; x++) {
+        escreva ("\n-------------------------------\n")
+        escreva ("      TABUADA DE ",x,"          \n")
+        escreva ("-------------------------------\n")
+        \ut.aguarde(500)
+      para (y = 1; y <= 10; y++) {
+        escreva (x," x ",y," = ",(x * y),"\n")
+        \ut.aguarde(500)
+      }
+    }
+    escreva ("\n-------------------------------\n")
+    escreva ("        FIM DO PROGRAMA        \n")
+    escreva ("-------------------------------\n")
+    escreva ("\n\n")
+  }
+}

@@ -1,0 +1,25 @@
+programa {/*Ex048 - Número Primo */
+  funcao inicio() 
+  {
+    inteiro num, cont, div = 0
+
+    escreva ("Digite um número: ")
+    leia (num)
+    
+    para (cont = 1; cont <= num; cont ++) {
+      se (num % cont == 0) {
+        escreva ("[",cont,"], ")
+        div++
+      } senao {
+        escreva (cont,", ")
+      }
+    }
+    escreva ("\nO número ",num," tem ",div," divisores")
+    se (div == 2) {
+      escreva ("\nLogo, ele é PRIMO!\n")
+    } senao {
+      escreva ("\nLogo, ele NÃO É PRIMO!\n")
+    }
+
+  }
+}

@@ -1,0 +1,29 @@
+programa {/*Ex047 - Contagem Personalizada
+*/
+  inclua biblioteca Util --> ut
+  funcao inicio() {
+    inteiro in,fin,pulo,cont
+
+    escreva ("INÍCIO = ")
+    leia (in)
+    escreva ("FINAL = ")
+    leia (fin)
+    escreva ("PASSO = ")
+    leia (pulo)
+
+    se (in < fin) {
+    para (cont = in; cont <= fin; cont += pulo) {
+      escreva (cont,"... ")
+      \ut.aguarde(500)
+    }
+    } senao {
+    se (in > fin) {
+    para (cont = in; cont >= fin; cont -= pulo) {
+      escreva (cont,"... ")
+      \ut.aguarde(500)
+    }
+    }
+    }
+    escreva ("ACABOU! ! !\n\n")
+  }
+}

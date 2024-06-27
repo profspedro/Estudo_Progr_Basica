@@ -1,0 +1,15 @@
+programa { /*Ex046 - Tabuada de Multiplicação
+*/
+  inclua biblioteca Util --> ut
+  funcao inicio() {
+    inteiro cont,num
+    escreva ("NÚMERO = ")
+    leia (num)
+
+    para (cont =1; cont <= 10; cont++) {
+      escreva ("\n",num," x ",cont," = ",(num * cont),"\n")
+      \ut.aguarde(500)
+    }
+    
+  }
+}

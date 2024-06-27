@@ -1,0 +1,24 @@
+programa {/*Ex052 - Pirâmide */
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+   inteiro andares, quantEstr = 0 , quantEsp = 0, contand, contEsp, contestr
+   escreva ("Quantos andares a pirâmide vai ter? ")
+   leia (andares)
+
+   quantEstr = (andares * 2) - 1
+
+   para (contand = 1; contand <= andares; contand ++) {
+    para (contEsp = 1; contEsp <= quantEsp; contEsp ++) {
+      escreva (" ")
+      }
+    quantEsp ++
+    para (contestr = 1; contestr <= quantEstr; contestr ++) {
+      escreva ("*")
+      \ut.aguarde(300)
+    }
+    escreva ("\n")
+    quantEstr -= 2
+   }
+  }
+}

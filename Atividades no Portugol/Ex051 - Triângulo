@@ -1,0 +1,20 @@
+programa {/*Ex051 - Triângulo */
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+    inteiro andares, contand, contestr, tot = 1
+
+    escreva ("Quantos andares seu triângulo vai ter? ")
+    leia (andares)
+
+    para (contand =1; contand <= andares; contand ++) {
+      para (contestr = 1; contestr <= tot; contestr ++){
+      escreva ("*")
+      \ut.aguarde(500)
+      }
+    tot++
+    escreva ("\n")
+    }
+
+  }
+}

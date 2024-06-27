@@ -1,0 +1,23 @@
+programa {/*Ex049 - Sequência de Fibonacci */
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+    inteiro cont,lim,n1 = 0,n2 = 1,n3
+
+    escreva ("Quantos números você quer exibir? ")
+    leia (lim)
+
+    escreva (n1,", ")
+    \ut.aguarde(500)
+    escreva (n2,", ")
+    \ut.aguarde(500)
+    para (cont = 3; cont <= lim; cont++) {
+      n3 = n1 + n2
+      escreva (n3,", ")
+      \ut.aguarde(500)
+      n1 = n2
+      n2 = n3
+    }
+    escreva ("\n\n")
+  }
+}
