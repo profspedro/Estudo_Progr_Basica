@@ -1,0 +1,61 @@
+programa {/*Ex041 - Cadastro de amigos
+Coloque "Obs.: Digite ACABOU no nome para parar", aceitando o nome em minúsculo. Perguntas a serem respondidas:
+- Quantos amigos foram cadastrados?
+- Qual é seu amigo mais velho?
+- Qual é seu amigo mais novo? 
+- Qual é a média de idade dos seus amigos?
+
+          Autor: Simão Pedro */
+  inclua biblioteca Texto --> txt
+  inclua biblioteca Tipos --> tp
+  inclua biblioteca Matematica --> mat
+  funcao inicio() 
+  {
+    cadeia nome, velho = "",novo = ""
+    inteiro idade, tot = 0, soma = 0, maior = 0, menor = 0
+    real media = 0
+
+    enquanto (verdadeiro) {
+      escreva ("\n------------------ NOVO AMIGO -----------------")
+      escreva ("\nObs.: Digite ACABOU no nome para parar")
+      escreva ("\nNome: ")
+      leia (nome)
+      se (\txt.caixa_alta(nome) == "ACABOU") {
+        pare
+      } senao {
+        escreva ("IDADE: ")
+        leia (idade)
+
+        // Analisando os dados
+        tot++
+        soma += idade
+
+        se (tot == 1) {
+          maior = idade
+          velho = nome
+          menor = idade
+          novo = nome
+        } senao {
+          se (idade < menor) {
+            menor = idade
+            novo = nome
+          }
+          se (idade > maior) {
+            maior = idade
+            velho = nome
+          }
+        }
+      } 
+    }
+      media = \tp.inteiro_para_real(soma) / \tp.inteiro_para_real(tot)
+      escreva ("\n ****************** INTERRROMPIDO *********************\n")
+      escreva ("\n ================= RESULTADOS ================== \n")
+      escreva ("\nTotal de amigos: ",tot)
+      escreva ("\nSoma das idades: ",soma)
+      escreva ("\nA média das idades é: ",\mat.arredondar(media,2))
+      escreva ("\nSeu amigo mais jovem é: ",novo," com ",menor," anos.")
+      escreva ("\nSeu amigo mais velho é: ",velho," com ",maior," anos")
+      escreva ("\n----------------------------------------------\n")
+
+  }
+}

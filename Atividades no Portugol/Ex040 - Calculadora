@@ -53,7 +53,7 @@ Ao colocar uma opção diferente aparece a mensagem: OPÇÃO INVÁLIDA
                   pare
           } 
     }
-
+    escreva ("\n\n")
 
   }
 }

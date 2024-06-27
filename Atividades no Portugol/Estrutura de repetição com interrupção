@@ -1,0 +1,18 @@
+programa {
+  funcao inicio() 
+  {
+      inteiro num
+      caracter resp
+      enquanto (verdadeiro) {
+          escreva ("Valor: ")
+          leia (num)
+
+          escreva ("Quer continuar? ")
+          leia (resp)
+          se (resp == "N" ou resp == "n") {
+              pare
+          }
+      }
+      escreva ("O usuário mandou parar...")
+  }
+}
