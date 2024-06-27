@@ -1,0 +1,31 @@
+programa { /* Estrutura de Repetição com Teste Lógico no final.
+Exercício Resolvido 01 do tipo "Faça enquanto"
+Ex043 - analisador de números */
+  funcao inicio() 
+  {
+    inteiro num, totpar = 0, totimpar = 0, menorimpar = 0, cont = 0
+    caracter resp
+
+    faca {
+      escreva ("Digite o ",(cont +1),"o. valor: ")
+      leia (num)
+      se (num % 2 == 0) {
+        totpar ++
+      } senao {
+          totimpar ++
+        se (totimpar == 1) {
+          menorimpar = num
+        se (num < menorimpar) {
+          menorimpar = num
+        }
+      }
+      }
+      cont ++
+      escreva ("Quer continuar? [S/N] ")
+      leia (resp)
+    } enquanto (resp == "S" ou resp == "s")
+    escreva ("\nAo todo você digitou ",cont," valores")
+    escreva ("\nVocê digitou ",totpar," números pares")
+    escreva ("\nO valor ",menorimpar," foi o menor número ÍMPAR digitado")
+  }
+}

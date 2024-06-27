@@ -1,0 +1,46 @@
+programa {/* Estrutura de Repetição com Teste Lógico no final.
+Exercício Resolvido 01 do tipo "Faça enquanto"
+Ex045 - jogo de adivinhar */
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+    inteiro num, total = 5
+     escreva ("Vou pensar em um número entre 1 e 10")
+     escreva ("\nVocê tem, ",total," chances para tentar adivinhar\n")
+
+     inteiro pensou = \ut.sorteia(1,10)
+     inteiro palpite, chances = 1
+     logico acertou = falso
+
+     faca {
+        escreva ("\nChance ",chances," / ",total)
+        escreva ("\nQual seu palpite? ")
+        leia (palpite)
+
+        // Analisar o palpite
+        se (palpite == pensou) {
+          acertou = verdadeiro
+          escreva ("\nPARABÉNS! Você acertou o número em ",chances," tentativas")
+          pare
+        } senao {
+          escreva ("\nINFELIZMENTE ainda não foi dessa vez...")
+          chances ++
+          \ut.aguarde(500)
+          se (chances <= total) {
+              escreva ("Mas vou te dar outra chance...")
+              \ut.aguarde(500)
+              se (palpite < pensou) {
+                  escreva ("Chute um valor MAIOR!")
+              } senao {
+                  escreva ("Chute um valor MENOR!")
+              }
+          } senao {
+              escreva ("\nSuas chances ACABARAM!")
+              pare
+          }
+        }
+
+     } enquanto (nao acertou)
+    escreva ("\n\n=============== FIM DO JOGO ===============\n\n")
+  }
+}

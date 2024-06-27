@@ -1,0 +1,54 @@
+programa {/*Ex042 - Cadastro de Funcionários (nome, sexo, salário)
+Perguntar "Quer continuar? [S/N]", se a resposta for N o programa para.
+
+          Autor: Simão Pedro */
+  funcao inicio() 
+  {
+    cadeia nome
+    real salario, media = 0, somasalM = 0
+    caracter resp, sexo
+    inteiro tot = 0, totM = 0, totF = 0, maiorM = 0, totMil = 0, maiorM = 0
+
+    enquanto (verdadeiro) {
+      escreva ("\nNome: ")
+      leia (nome)
+      escreva ("Sexo: [M/F] ")
+      leia (sexo)
+      escreva ("Salário: R$ ")
+      leia (salario)
+
+      tot++
+      se (sexo == "M" ou sexo == "m") {
+        totM++
+        somasalM += salario
+        se (totM ==1) {
+          maiorM = salario
+        } senao se (salario > maiorM) {
+          maiorM = salario
+        }
+      } senao se (sexo == "F" ou sexo == "f") {
+        totF++
+        se (salario > 1000) {
+          totMil ++
+        }
+      }
+
+      escreva ("Quer continuar? [S/N] ")
+      leia (resp)
+      se (resp == "N" ou resp == "n") {
+        pare
+      }
+    }
+    media = somasalM / totM
+    escreva ("\n============ RESULTADOS ============ \n")
+
+    escreva ("\nTotal de Funcionários: ",tot)
+    escreva ("\nTotal de Homens: ",totM)
+    escreva ("\nTotal de Mulheres: ",totF)
+    escreva ("\nA média salarial dos Homens é: R$ ",media)
+    escreva ("\nTemos ",totMil," mulheres com salários acima de R$ 1000,00")
+    escreva ("\nO maior salário entre os homens é de R$ ",maiorM)
+
+
+  }
+}

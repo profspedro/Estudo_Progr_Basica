@@ -1,0 +1,40 @@
+programa {/* Estrutura de Repetição com Teste Lógico no final.
+Exercício Resolvido 01 do tipo "Faça enquanto"
+Ex044 - números sorteados
+*/
+  inclua biblioteca Util --> ut
+  funcao inicio() 
+  {
+    inteiro num, cont = 0, soma = 0, maior = 0, menor = 0, tot5 = 0
+    caracter resp
+    faca {
+      num = ut.sorteia(1,10)
+      escreva ("O ",(cont + 1),"o. valor sorteado foi: ",num)
+      cont ++
+      soma += num
+      se (cont == 1) {
+        menor = num
+      } senao se (cont > 1) {
+        se (num < menor) {
+          menor = num
+        }
+      } 
+      se (cont == 1) {
+        maior = num
+      } senao se (cont > 1) {
+        se (num > maior) {
+          maior = num
+        }
+      }
+      se (num ==5) {
+        tot5 ++
+      }
+      escreva ("\nQuer sortear mais um número? [S/N] ")
+      leia (resp)
+    } enquanto (resp == "S" ou resp == "s")
+    escreva ("\nVocê me fez sortear ",cont," valores")
+    escreva ("\nA soma de todos eles foi igual a ",soma)
+    escreva ("\nO maior valor foi ",maior," e o menor valor foi ",menor)
+    escreva ("\nO valor 5 foi sorteado ",tot5," vezes")
+  }
+}
