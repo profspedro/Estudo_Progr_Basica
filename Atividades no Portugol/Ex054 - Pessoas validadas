@@ -1,0 +1,77 @@
+programa {/*Ex054 - Pessoas Validadas 
+Leitura de nome e idade de várias pessoas. 
+No resultado final mostre a pessoa mais velha e a mais nova.
+O programa deverá ter a validação dos dados de enttrada:
+- nome com pelo menos 3 letras;
+- idade entre 0 e 130 anos;
+- pergunta se quer continuar aceitando somente as respostas S ou N.*/
+  inclua biblioteca Texto --> tx
+  inclua biblioteca Tipos --> tp
+  funcao inicio() 
+  {
+    cadeia teclado, nome, jovem = "", velho = ""
+    inteiro idade, cont = 0, maior = 0, menor = 0
+    caracter resp
+
+    faca {
+      escreva ("\n      PESSOA ",(cont + 1)," \n")
+
+      enquanto (verdadeiro) {
+        escreva ("NOME: ")
+        leia (teclado)
+        se (\tx.numero_caracteres(teclado) >= 3) {
+          nome = teclado
+          pare
+        } senao {
+          escreva ("<<ERRO>> O nome deve ter pelo menos 3 letras.")
+        }
+      }
+      enquanto (verdadeiro) {
+        escreva ("IDADE: ")
+        leia (teclado)
+        se (\tp.cadeia_e_inteiro(teclado)) {
+          idade = \tp.cadeia_para_inteiro(teclado,10)
+          se (idade >= 1 e idade <= 130) {
+            pare
+          } senao {
+            escreva ("<<ERRO>> A idade deve ser um número entre 0 e 130")
+          }
+        } senao {
+          escreva ("<<ERRO>> A idade deve ser um número inteiro.")
+        }
+      }
+      
+      cont ++
+      se (cont == 1) {
+        maior = idade
+        menor = idade
+        jovem = nome
+        velho = nome
+      } senao {
+          se (idade > maior) {
+            maior = idade
+            velho = nome
+          }
+          se (idade < menor) {
+            menor = idade
+            jovem = nome
+          }
+      }
+      enquanto (verdadeiro) {
+        escreva ("Quer continuar? [S/N] ")
+        leia (teclado)
+        se (\tp.cadeia_e_caracter(teclado)) {
+          resp = \tp.cadeia_para_caracter(teclado)
+          se (resp == "S" ou resp == "s" ou resp == "N" ou resp == "n"){
+            pare
+          } senao {
+            escreva ("<<RESPOSTA INVÁLIDA>> Responda apenas S ou N.\n")
+          }
+        }
+      }
+    } enquanto (resp == "S" ou resp == "s")
+    escreva ("\nVocê cadastrou ",cont," pessoas")
+    escreva ("\n",jovem," é a pessoa mais nova, com ",menor," anos")
+    escreva ("\n",velho," é a pessoa mais velha, com ",maior," anos")
+  }
+}
