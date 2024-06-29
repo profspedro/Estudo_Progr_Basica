@@ -29,7 +29,7 @@ O programa deverá ter a validação dos dados de enttrada:
       enquanto (verdadeiro) {
         escreva ("IDADE: ")
         leia (teclado)
-        se (\tp.cadeia_e_inteiro(teclado)) {
+        se (\tp.cadeia_e_inteiro(teclado,10)) {
           idade = \tp.cadeia_para_inteiro(teclado,10)
           se (idade >= 1 e idade <= 130) {
             pare
